@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VideoShop.Data
 {
-    // This class created fot communication with database by EF Core.
+    //This class created fot communication with database by EF Core.
     public class VidoShopDbContxt
     {
         public VidoShopDbContxt()
