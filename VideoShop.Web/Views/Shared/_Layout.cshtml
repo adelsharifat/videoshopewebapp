@@ -9,37 +9,36 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">VideoShop.Web</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="header-menu-container">
+            <div class="logo-wraper">Logo</div>
+            <div class="menu-wraper">
+                <ul class="main-menu">
+                    <li class="main-menu-item"><a class="main-menu-link">خانه</a></li>
+                    <li class="main-menu-item"><a class="main-menu-link">تماس با ما</a></li>
+                    <li class="main-menu-item"><a class="main-menu-link">آموزش ها</a></li>
+                    <li class="main-menu-item"><a class="main-menu-link">بلاگ</a></li>
+                </ul>
             </div>
-        </nav>
+            <div class="login-logout-buttons-wraper">
+                <a href="#">ورود</a>
+                <a href="#">ثبت نام</a>
+            </div>
+        </div>
+        <div class="row">
+            Header filter & search
+        </div>
     </header>
-    <div class="container">
+
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - VideoShop.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+
+
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
