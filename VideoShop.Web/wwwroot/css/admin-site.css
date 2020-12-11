@@ -1,0 +1,84 @@
+﻿html, body {
+    direction: rtl !important;
+    text-align: right;
+}
+
+
+.header{
+    width: 100%;
+    height: 3.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.header .toggle-sidebar{
+    width: 3.5rem;
+    height: 100%;
+}
+
+.header .toggle-sidebar .toggle-sidebar-btn{
+    cursor: pointer;
+    outline: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: none !important;
+    background: none !important;
+}
+
+.header .toggle-sidebar .toggle-sidebar-btn span{
+    display: block;
+    width: 50%;
+    height: 2px;
+    margin: 2px 0;
+    background: #999;
+}
+
+.header .toggle-sidebar .toggle-sidebar-btn:hover span {
+    background: #333;
+}
+
+.sidebar{
+    
+}
+
+.content-wrapper{
+    position: relative;
+    height: calc(100vh - 3.5rem);
+}
+
+.content-wrapper .sidebar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 15rem;
+    margin-right: -15rem;
+    background-color: white;
+    box-shadow: -1px 0 1px 0 rgba(0,0,0,0.1);
+    transition: all 300ms ease;
+}
+
+.content-wrapper .sidebar.show{
+    margin-right: 0;
+}
+
+.content-wrapper .content {
+    margin-right: 15rem;
+    transition: all 300ms ease;
+}
+
+.content-wrapper .content.expand {
+    margin-right: 0;
+   
+}
+
+
+
+
