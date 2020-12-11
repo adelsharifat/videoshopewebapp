@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/admin-site.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="toggle-sidebar">
+            <button id="jsToggleSidebarBtn" class="toggle-sidebar-btn">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div id="jsSidebar" class="sidebar">
+            sidebar
+        </div>
+        <div id="jsContent" class="content expand">
+             @RenderBody()
+        </div>       
+    </div>
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        let exist = false;
+        $('#jsToggleSidebarBtn').click(function() {
+            
+             $('#jsSidebar').toggleClass('show');  
+             $('#jsContent').toggleClass('expand'); 
+        })
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
