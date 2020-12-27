@@ -1,16 +1,55 @@
-﻿html, body {
-    direction: rtl !important;
-    text-align: right;
+﻿@font-face {
+    font-family: "yekan";
+    src: url("../fonts/Yekan/Yekan.eot");
+
+    src: url("../fonts/Yekan/Yekan.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/Yekan/Yekan.woff") format("woff"), url("../fonts/Yekan/Yekan.ttf") format("truetype"),
+         url("../fonts/Yekan/Yekan.svg#BYekan") format("svg");
+
+    font-weight: normal;
+    font-style: normal
 }
 
 
+
+*:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+html, body {
+    font-family: yekan !important;
+    direction: rtl !important;
+    text-align: right;
+    background-color: #f5f5f5;
+}
+
+
+/* ====== ======== ======= ====== ====== ====== ======= ========*/
+/*    custom css class defination here
+/* ====== ======== ======= ====== ====== ====== ======= ========*/
+.rtl{
+    direction: rtl !important;
+}
+
+.ltr{
+    direction: ltr !important;
+}
+
+    
+    
+/* ============================================================*/
 .header{
     width: 100%;
     height: 3.5rem;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
-    
+    background-color: #fff;
     
 }
 
@@ -44,10 +83,6 @@
     background: #333;
 }
 
-.sidebar{
-    
-}
-
 .content-wrapper{
     position: relative;
     height: calc(100vh - 3.5rem);
@@ -62,8 +97,39 @@
     margin-right: -15rem;
     background-color: white;
     box-shadow: -1px 0 1px 0 rgba(0,0,0,0.1);
+    z-index: 1000;
     transition: all 300ms ease;
 }
+
+
+.content-wrapper .sidebar .sidebar-nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+}
+
+.content-wrapper .sidebar .sidebar-nav .nav-menu-item{
+}
+
+.content-wrapper .sidebar .sidebar-nav .nav-menu-item .nav-item-link{
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    color: #333 !important;
+    transition: all 100ms ease;
+}
+
+.content-wrapper .sidebar .sidebar-nav .nav-menu-item .nav-item-link:hover{
+    color: #fff !important;
+    background-color: rgb(255, 180, 0);
+}
+
 
 .content-wrapper .sidebar.show{
     margin-right: 0;
@@ -77,6 +143,13 @@
 .content-wrapper .content.expand {
     margin-right: 0;
    
+}
+
+.admin-avatar{
+    width: 32px;
+    height: 32px;
+    border-radius:50%;
+    overflow: hidden;
 }
 
 

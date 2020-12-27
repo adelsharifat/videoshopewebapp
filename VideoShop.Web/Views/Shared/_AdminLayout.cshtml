@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/fontawesome/all.css" />
+    <link rel="stylesheet" href="~/css/fontawesome/regular.css" />
+    <link rel="stylesheet" href="~/css/fontawesome/solid.css" />
     <link rel="stylesheet" href="~/css/admin-site.css" />
 </head>
 <body>
@@ -14,11 +17,66 @@
                 <span></span><span></span><span></span>
             </button>
         </div>
+        <div class="mr-auto ltr">
+             <div class="dropdown">
+               <button class="btn dropdown-toggle d-flex align-items-center" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   <div class="admin-avatar mr-3">
+                       <img class="w-100 h-100" src="~/img/admin.jpg" alt="admin-avatar">
+                   </div>
+               </button>
+               <div class="dropdown-menu text-right" aria-labelledby="dropdownMenuButton">
+                 <a class="dropdown-item" href="#">مشاهده پروفایل</a>
+                 <a class="dropdown-item" href="#">ویرایش پروفایل</a>
+                 <a class="dropdown-item" href="#">خروج از سایت</a>
+               </div>
+             </div>
+        </div>
     </div>
 
     <div class="content-wrapper">
         <div id="jsSidebar" class="sidebar">
-            sidebar
+            <ul class="sidebar-nav">
+                <li class="nav-menu-item">
+                    
+                    <a href="#" class="nav-item-link">
+                        <i class="fas fa-user ml-2"></i>
+                        <span>داشبورد</span>
+                    </a>
+                </li>
+            <li class="nav-menu-item">
+                <a class="nav-item-link" asp-controller="Site"  asp-action="Index">
+                    <i class="fas fa-globe-asia ml-2"></i>
+                    <span>مشاهده سایت</span>
+                </a>
+            </li>e
+            <li class="nav-menu-item">
+                <a href="#" class="nav-item-link">
+                        <i class="fas fa-money-bill-alt"></i>
+                    <span>حسابداری</span>
+                </a>
+            </li>
+            <li class="nav-menu-item">
+                <a href="#" class="nav-item-link">
+                        <i class="fas fa-dollar"></i>
+                    <span>مدیریت اشتراک ها</span>
+                </a>
+            </li>
+            <li class="nav-menu-item">
+                <a href="#" class="nav-item-link">
+                    <i class="fas fa-comment"></i>
+                    <span>نظرات</span>
+                </a>
+            </li>
+            <li class="nav-menu-item">
+                <a href="#" class="nav-item-link">تیکت</a>
+            </li>
+            <li class="nav-menu-item">
+                <a href="#" class="nav-item-link">تخفیف</a>
+            </li>
+            <li class="nav-menu-item">
+                <a href="#" class="nav-item-link">کاربران</a>
+            </li>
+            </ul>
         </div>
         <div id="jsContent" class="content expand">
              @RenderBody()

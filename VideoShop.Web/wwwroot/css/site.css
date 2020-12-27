@@ -1,4 +1,13 @@
-﻿html,body{
+﻿*:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+html,body{
     direction:rtl !important;
     text-align: right;
 }
